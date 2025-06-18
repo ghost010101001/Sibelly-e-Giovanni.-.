@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sibelly e Giovanni</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://imgs.search.brave.com/f9pgS-oTKzdpOKNTE4fs3NfWMccbMhpthOxHXJaKafY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvc3Vu/Zmxvd2VyLWRlc2t0/b3AtdHp2cjUwMDdt/NTZ1ZmFocC5qcGc');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background: rgba(244, 248, 189, 0.842); /* Rosa com transparência */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(231, 84, 183, 0.9); /* Sombra rosa */
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #e754b7; /* Rosa título */
+        }
+
+        input {
+            display: block;
+            width: 220px;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 1px solid #e754b7; /* Borda rosa */
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 25px;
+            border: none;
+            background-color: #e754b7; /* Botão rosa */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d043a5; /* Rosa um pouco mais escuro ao passar o mouse */
+        }
+    </style>
+    <script>
+        function login() {
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            if (usuario === "Sibelly" && senha === "21012025") {
+                alert("Entrada liberada!");
+                window.location.href = "site.html";
+            } else {
+                alert("Algo está errado!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="usuario" placeholder="Digite seu nome:">
+        <input type="password" id="senha" placeholder="Quando iniciou nosso namoro?">
+        <button onclick="login()">Entrar</button>
+    </div>
+</body>
+</html>
