@@ -9,24 +9,22 @@
       background: #df87d6;
       color: #000000;
       font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       padding-top: 40px;
       margin: 0;
+      overflow-x: hidden;
+      position: relative;
     }
 
-    h1 {
-      margin-bottom: 30px;
-      color: #000000;
+    h1, h2, p {
+      text-align: center;
     }
 
     p {
-      max-width: 600px;
-      text-align: center;
-      margin-bottom: 15px;
-      font-size: 18px;
-      line-height: 1.5;
+      max-width: 800px;
+      margin: 30px auto;
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: bold;
     }
 
     .contador {
@@ -35,7 +33,7 @@
       gap: 20px;
       max-width: 700px;
       width: 90%;
-      margin-bottom: 50px;
+      margin: 30px auto;
     }
 
     .box {
@@ -82,6 +80,22 @@
       background-color: #ec6594a8;
       box-shadow: 0 4px 8px rgba(231, 6, 6, 0.452);
       padding: 5px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .heart {
+      position: fixed;
+      color: rgba(255, 0, 0, 0.61);
+      font-size: 24px;
+      pointer-events: none;
+      z-index: 0;
+      animation: float linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0); opacity: 1; }
+      100% { transform: translateY(-120vh) translateX(50px); opacity: 0; }
     }
   </style>
 </head>
@@ -94,52 +108,36 @@
     Seu navegador não suporta o elemento de áudio.
   </audio>
 
-  <img src="50e7be52-3f1a-45e9-aec2-0149134a371a.png" alt="Imagem" width="400" height="500">
+  <!-- Imagem centralizada -->
+  <div style="text-align: center; margin: 20px 0;">
+    <img src="50e7be52-3f1a-45e9-aec2-0149134a371a.png" alt="Imagem" width="400" height="500" style="display: block; margin: auto;">
+  </div>
 
   <h1>💗 Tempo Juntos 💗</h1>
 
-  <!-- CONTADOR - NÃO MEXI EM NADA AQUI -->
   <div class="contador">
-    <div class="box">
-      <div class="numero" id="anos">0</div>
-      <div class="texto">anos</div>
-    </div>
-    <div class="box">
-      <div class="numero" id="meses">0</div>
-      <div class="texto">meses</div>
-    </div>
-    <div class="box">
-      <div class="numero" id="dias">0</div>
-      <div class="texto">dias</div>
-    </div>
-    <div class="box">
-      <div class="numero" id="horas">0</div>
-      <div class="texto">horas</div>
-    </div>
-    <div class="box">
-      <div class="numero" id="minutos">0</div>
-      <div class="texto">minutos</div>
-    </div>
-    <div class="box">
-      <div class="numero" id="segundos">0</div>
-      <div class="texto">segundos</div>
-    </div>
+    <div class="box"><div class="numero" id="anos">0</div><div class="texto">anos</div></div>
+    <div class="box"><div class="numero" id="meses">0</div><div class="texto">meses</div></div>
+    <div class="box"><div class="numero" id="dias">0</div><div class="texto">dias</div></div>
+    <div class="box"><div class="numero" id="horas">0</div><div class="texto">horas</div></div>
+    <div class="box"><div class="numero" id="minutos">0</div><div class="texto">minutos</div></div>
+    <div class="box"><div class="numero" id="segundos">0</div><div class="texto">segundos</div></div>
   </div>
 
-  <div style="max-width: 500px; text-align: left; margin-bottom: 50px;">
-    <p><strong>Amor, hoje completamos 5 meses juntos e eu queria te dizer o quanto estou feliz por ter você como minha namorada...</strong></p>
-    <p><strong>Eu nunca vou me arrepender de ter te escolhido para ser a minha mulher...</strong></p>
-    <p><strong>Você me dá forças para continuar todos os dias...</strong></p>
-    <p><strong>Olha, amor… Você pode tentar e não conseguir várias vezes...</strong></p>
-    <p><strong>Eu espero muito, amor, que você esteja sendo feliz comigo...</strong></p>
-    <p><strong>Eu te amo e sempre vou te amar, tá, minha princesa, minha menina...</strong></p>
-    <p><strong>Além do que já falei, você é minha futura esposa e muito mais...</strong></p>
-    <p><strong>Eu iria por você onde ninguém foi por mim...</strong></p>
-    <p><strong>E se eu não puder ser o lápis que desenha a sua felicidade...</strong></p>
-    <p><strong>Esse seu sorriso, seus olhos, seu humor, seu corpo...</strong></p>
-    <p><strong>Como eu não poderia te amar, se você é tudo o que eu sempre quis?...</strong></p>
-    <p><strong>Você não precisa ser boa para fazer algo...</strong></p>
-    <p><strong>Só depois que te conheci eu tive medo da morte...</strong></p>
+  <div>
+    <p>Amor, hoje completamos 5 meses juntos e eu queria te dizer o quanto estou feliz por ter você como minha namorada...</p>
+    <p>Eu nunca vou me arrepender de ter te escolhido para ser a minha mulher...</p>
+    <p>Você me dá forças para continuar todos os dias...</p>
+    <p>Olha, amor… Você pode tentar e não conseguir várias vezes...</p>
+    <p>Eu espero muito, amor, que você esteja sendo feliz comigo...</p>
+    <p>Eu te amo e sempre vou te amar, tá, minha princesa, minha menina...</p>
+    <p>Além do que já falei, você é minha futura esposa e muito mais...</p>
+    <p>Eu iria por você onde ninguém foi por mim...</p>
+    <p>E se eu não puder ser o lápis que desenha a sua felicidade...</p>
+    <p>Esse seu sorriso, seus olhos, seu humor, seu corpo...</p>
+    <p>Como eu não poderia te amar, se você é tudo o que eu sempre quis?...</p>
+    <p>Você não precisa ser boa para fazer algo...</p>
+    <p>Só depois que te conheci eu tive medo da morte...</p>
   </div>
 
   <div class="video-container">
@@ -149,7 +147,7 @@
     </video>
   </div>
 
-  <div style="max-width: 500px; text-align: left; margin-bottom: 50px;">
+ <div>
     <p><strong>Português:</strong> Eu te amo 💗</p>
     <p><strong>Inglês:</strong> I love you 💗</p>
     <p><strong>Espanhol:</strong> Te amo 💗</p>
@@ -180,7 +178,7 @@
     <p><strong>Finlandês:</strong> Rakastan sinua 💗</p>
   </div>
 
-  <!-- SCRIPT DO CONTADOR - NÃO ALTERADO -->
+  <!-- Script Contador -->
   <script>
     function calcularDiferenca(dataInicial, dataAtual) {
       let anos = dataAtual.getFullYear() - dataInicial.getFullYear();
@@ -190,32 +188,20 @@
       let minutos = dataAtual.getMinutes() - dataInicial.getMinutes();
       let segundos = dataAtual.getSeconds() - dataInicial.getSeconds();
 
-      if (segundos < 0) {
-        segundos += 60;
-        minutos--;
-      }
-      if (minutos < 0) {
-        minutos += 60;
-        horas--;
-      }
-      if (horas < 0) {
-        horas += 24;
-        dias--;
-      }
+      if (segundos < 0) { segundos += 60; minutos--; }
+      if (minutos < 0) { minutos += 60; horas--; }
+      if (horas < 0) { horas += 24; dias--; }
       if (dias < 0) {
         const ultimoDiaDoMesAnterior = new Date(dataAtual.getFullYear(), dataAtual.getMonth(), 0).getDate();
         dias += ultimoDiaDoMesAnterior;
         meses--;
       }
-      if (meses < 0) {
-        meses += 12;
-        anos--;
-      }
+      if (meses < 0) { meses += 12; anos--; }
 
       return { anos, meses, dias, horas, minutos, segundos };
     }
 
-    const dataInicio = new Date(2025, 1, -9, 20, 7, 0); // 21 de janeiro de 2025 às 22:36
+    const dataInicio = new Date(2025, 0, 21, 23, 7, 0);  // 21/01/2025 22:36
 
     const elementos = {
       anos: document.getElementById('anos'),
@@ -228,7 +214,6 @@
 
     function atualizarContador() {
       const agora = new Date();
-
       if (agora < dataInicio) {
         elementos.anos.textContent = '0';
         elementos.meses.textContent = '0';
@@ -238,19 +223,34 @@
         elementos.segundos.textContent = '0';
         return;
       }
-
-      const diferenca = calcularDiferenca(dataInicio, agora);
-
-      elementos.anos.textContent = diferenca.anos;
-      elementos.meses.textContent = diferenca.meses;
-      elementos.dias.textContent = diferenca.dias;
-      elementos.horas.textContent = diferenca.horas;
-      elementos.minutos.textContent = diferenca.minutos;
-      elementos.segundos.textContent = diferenca.segundos;
+      const dif = calcularDiferenca(dataInicio, agora);
+      elementos.anos.textContent = dif.anos;
+      elementos.meses.textContent = dif.meses;
+      elementos.dias.textContent = dif.dias;
+      elementos.horas.textContent = dif.horas;
+      elementos.minutos.textContent = dif.minutos;
+      elementos.segundos.textContent = dif.segundos;
     }
 
     setInterval(atualizarContador, 1000);
     atualizarContador();
+  </script>
+
+  <!-- Script Corações -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.top = window.innerHeight + 'px';
+      heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+      heart.innerHTML = '❤';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+
+    setInterval(createHeart, 300);
   </script>
 
 </body>
